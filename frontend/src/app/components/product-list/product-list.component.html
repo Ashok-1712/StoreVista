@@ -1,0 +1,15 @@
+<div class="product-list-main">
+  <h1 class="text-center mb-4">PRODUCT LIST</h1>
+  <div class="container">
+    <app-filter (search)="filterProducts($event.search, $event.minPrice, $event.maxPrice, $event.category)"></app-filter>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mb-4" *ngFor="let product of filteredProducts">
+        <app-product-card [product]="product">
+          <button class="btn btn-primary" (click)="isLoggedIn() ? addToCart(product) : showLoginAlert()">Add to Cart</button>
+          <button class="btn btn-secondary" (click)="viewProduct(product)">View Details</button>
+        </app-product-card>
+      </div>
+    </div>
+  </div>
+</div>
+

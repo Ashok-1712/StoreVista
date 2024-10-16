@@ -1,0 +1,16 @@
+<form [formGroup]="cartForm" class="cart-container">
+  <div formArrayName="items">
+    <div *ngFor="let item of cartItems; let i = index" [formGroupName]="i" class="cart-item">
+      <app-product-card [product]="item.product">
+        <div class="cart-actions">
+          <input type="number" formControlName="quantity" min="1" class="quantity-input" />
+          <button (click)="removeFromCart(item.product.p_id)" class="btn remove-button">Remove</button>
+        </div>
+      </app-product-card>
+    </div>
+  </div>
+  
+  <div class="total">
+    <h3>Total Price: {{ totalPrice | currency : 'INR' }}</h3>
+  </div>
+</form>

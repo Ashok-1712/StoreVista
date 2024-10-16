@@ -1,0 +1,23 @@
+<div class="admin-product-list">
+  <h1>Admin Product List</h1>
+  <button class="btn btn-add" (click)="addProduct()">Add New Product</button>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let product of products">
+        <div class="product-card">
+          <img [src]="product.p_image" alt="{{ product.p_name }}" class="card-img-top" />
+          <div class="card-body">
+            <div class="card-title">{{ product.p_name }}</div>
+            <div class="card-text">{{product.p_price | currency : 'INR'}}</div>
+            <div class="card-text">{{ product.p_description }}</div>
+            <div class="action-buttons">
+              <button class="btn btn-edit" (click)="editProduct(product.p_id)">Edit</button>
+              <button class="btn btn-delete" (click)="deleteProduct(product.p_id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

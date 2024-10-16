@@ -1,0 +1,33 @@
+@import 'src/style_variables.scss'; 
+.product-list-main {
+  h1 {
+    color: $primary-color; 
+    margin-bottom: $margin-base; 
+  }
+
+  .btn {
+    font-size: $font-size-md;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: $border-radius; 
+    cursor: pointer; 
+    transition: background-color $transition;
+    margin: $margin-base;
+
+    &.btn-primary {
+      background-color: $primary-color; 
+      color: white; 
+      &:hover {
+        background-color: darken($primary-color, 5%); 
+      }
+    }
+
+    &.btn-secondary {
+      background-color: $highlight-color; 
+      color: $dark-color; 
+      &:hover {
+        background-color: darken($highlight-color, 5%); 
+      }
+    }
+  }
+}

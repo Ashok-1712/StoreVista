@@ -1,0 +1,15 @@
+<div class="admin-tabs">
+    <button type="button" class="tab-button" (click)="activeTab = 'products'">Product List</button>
+    <button type="button" class="tab-button" (click)="activeTab = 'users'">Users List</button>
+  </div>
+  
+  <div class="tab-content">
+    
+    <div *ngIf="activeTab === 'products'">
+      <app-admin-product-list></app-admin-product-list>
+    </div>
+    <div *ngIf="activeTab === 'users'">
+      <app-user-management></app-user-management>
+    </div>
+  </div>
+  

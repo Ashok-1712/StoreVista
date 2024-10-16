@@ -1,0 +1,28 @@
+<div class="filter-container">
+
+  <div class="input-group">
+    <input type="text" [formControl]="searchTermControl" placeholder="Search by product" (keydown)="onEnter($event)" class="form-control search-input" />
+    
+    
+    <button type="button" class="btn btn-search" (click)="onSearch()">Search</button>
+  </div>
+  
+ 
+  <div class="dropdown">
+    <button class="btn btn-dropdown" (click)="toggleDropdown()">
+      Filters
+    </button>
+    <div class="dropdown-content" [ngClass]="{'show': showDropdown}">
+      
+      <div class="price-range">
+        <input type="number" [formControl]="minPriceControl" placeholder="Min Price" (keydown)="onEnter($event)" class="form-control" />
+        <input type="number" [formControl]="maxPriceControl" placeholder="Max Price" (keydown)="onEnter($event)" class="form-control" />
+      </div>
+      
+   
+      <div class="category">
+        <input type="text" [formControl]="categoryControl" placeholder="Category" (keydown)="onEnter($event)" class="form-control" />
+      </div>
+    </div>
+  </div>
+</div>

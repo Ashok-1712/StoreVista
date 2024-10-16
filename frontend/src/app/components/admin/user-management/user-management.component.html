@@ -1,0 +1,42 @@
+<div class="user-management">
+  <h1>User Management</h1>
+  <button (click)="showAddUserForm = !showAddUserForm" class="btn-toggle">
+    {{ showAddUserForm ? 'Cancel' : 'Add New Admin' }}
+  </button>
+  
+  <div *ngIf="showAddUserForm" class="add-user-form">
+    <form [formGroup]="userForm" (ngSubmit)="addUser()">
+      <input type="email" formControlName="email" placeholder="Email" required />
+      <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+        <small *ngIf="userForm.get('email')?.errors?.['required']">E-mail is required</small>
+        <small *ngIf="userForm.get('email')?.errors?.['email']">Valid E-mail required</small>
+      </div>
+      <input type="password" formControlName="password" placeholder="Password" required />
+      <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+        <small *ngIf="userForm.get('password')?.errors?.['required']">Password Required</small>
+        <small *ngIf="userForm.get('password')?.errors?.['minlength']">Password must be more than 6 characters</small>
+      </div>
+      <button type="submit" class="btn-submit">Add User</button>
+    </form>
+  </div>
+
+  <h2>Users List</h2>
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.u_email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button (click)="deleteUser(user.u_id)" class="btn-delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

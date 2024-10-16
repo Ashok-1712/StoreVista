@@ -1,0 +1,132 @@
+@import 'src/style_variables.scss'; 
+
+.admin-product-list {
+  padding: 40px 0;
+  background-color: $background-color;
+
+  h1 {
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+
+  .btn-add {
+    display: block; 
+    margin: 0 auto 20px auto; 
+    padding: 10px 20px;
+    background-color: $highlight-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-bg-color;
+    }
+  }
+
+  .product-card {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 20px; 
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      border-radius: 8px 8px 0 0;
+      height: 200px;
+      object-fit: cover; 
+    }
+
+    .card-body {
+      padding: 15px;
+
+      .card-title {
+        font-size: 1.2rem;
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: $secondary-color;
+        margin-bottom: 10px;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: space-between; 
+        margin-top: 10px;
+
+        .btn-edit,
+        .btn-delete {
+          width: 48%; 
+          padding: 10px;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &.btn-edit {
+            background-color: $button-primary-bg;
+            color: white;
+
+            &:hover {
+              background-color: $button-primary-hover-bg;
+            }
+          }
+
+          &.btn-delete {
+            background-color: $button-delete-bg;
+            border: 1px solid $border-color;
+            color: white;
+
+            &:hover {
+              background-color: $button-secondary-hover-bg;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 10px;
+    }
+
+    .card-img-top {
+      height: 150px; 
+    }
+  }
+
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.8rem; 
+    }
+
+    .card-img-top {
+      height: 120px; 
+    }
+
+    .card-body {
+      .card-title {
+        font-size: 1rem; 
+      }
+
+      .card-text {
+        font-size: 0.9rem; 
+      }
+    }
+  }
+}

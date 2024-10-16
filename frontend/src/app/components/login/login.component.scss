@@ -1,0 +1,95 @@
+@import 'src/style_variables.scss'; 
+
+
+
+.login-container {
+    max-width: 500px; 
+    margin: 40px auto;
+    padding: 30px; 
+    background-color: $light-background-color; 
+    border-radius: $border-radius; 
+    box-shadow: $box-shadow; 
+  
+    .login-header {
+      margin-bottom: 20px; 
+      h1 {
+        color: $primary-color; 
+        font-size: $font-size-lg; 
+        font-weight: 600; 
+        text-align: center; 
+      }
+    }
+  
+    .login-body {
+      .form-group {
+        margin-bottom: $margin-base; 
+  
+        label {
+          display: block; 
+          margin-bottom: 5px; 
+          font-weight: 500; 
+        }
+  
+        .form-control {
+          width: 100%;
+          padding: 12px; 
+          border: 1px solid $input-border-color; 
+          border-radius: $border-radius; 
+          font-size: $font-size-base; 
+          transition: border-color $transition; 
+  
+          &:focus {
+            border-color: $input-focus-color; 
+            outline: none; 
+          }
+        }
+  
+        .error-message {
+          color: $error-color;
+          font-size: $font-size-sm; 
+          margin-top: 5px; 
+        }
+      }
+  
+      .login-button {
+        width: 100%; 
+        padding: 12px;
+        background-color: $primary-color; 
+        color: white; 
+        border: none;
+        border-radius: $border-radius; 
+        font-size: $font-size-base; 
+        cursor: pointer; 
+        transition: background-color $transition; 
+  
+        &:hover {
+          background-color: darken($primary-color, 10%); 
+        }
+  
+        &:disabled {
+          background-color: #bdc3c7; 
+          cursor: not-allowed; 
+        }
+      }
+    }
+  
+  
+    .login-error-message {
+      color: $error-color; 
+      text-align: center; 
+      margin-top: 15px; 
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .login-container {
+      margin: 20px; 
+      padding: 20px; 
+    }
+  
+    .login-header h1 {
+      font-size: 1.5rem; 
+    }
+  }
+  

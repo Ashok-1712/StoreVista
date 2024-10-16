@@ -1,0 +1,45 @@
+
+$font-family: 'Circular Std', 'Helvetica Neue', Arial, sans-serif; 
+
+$primary-color: #FF5A5F;           
+$secondary-color: #484848;       
+$highlight-color: #FFB400;        
+$background-color: #F7F7F7;      
+$light-background-color: #FFFFFF;  
+$light-color: #F2F2F2;           
+$border-color: #E0E0E0;           
+$input-border-color: $border-color;
+$input-focus-color: $primary-color;
+$hover-bg-color: darken($primary-color, 10%); 
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+$error-color: #E74C3C;            
+$border-radius: 8px;              
+
+
+$font-size-base: 1rem;             
+$font-size-md: 1rem;               
+$font-size-lg: 1.25rem;           
+$font-size-sm: 0.875rem;           
+$font-size-xl: 1.5rem;            
+
+$margin-base: 15px;                
+$transition: 0.3s ease;            
+
+
+$button-primary-bg: $primary-color;   
+$button-primary-hover-bg: $hover-bg-color; 
+$button-secondary-bg: #BDBDBD; 
+$button-secondary-hover-bg: darken($button-secondary-bg, 10%); 
+$button-delete-bg: rgb(154, 42, 25); 
+
+
+$text-color: #333333;               
+$muted-text-color: #7F8C8D;         
+$dark-color: #1C2833;             
+
+
+$card-background-color: $light-background-color; 
+$card-border-color: $border-color;            
+$card-shadow: $box-shadow;                     
+$card-title-color: $text-color;                  
+$price-color: $highlight-color;                

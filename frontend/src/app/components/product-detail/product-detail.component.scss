@@ -1,0 +1,74 @@
+@import 'src/style_variables.scss';
+
+.product-detail-container {
+  padding: $margin-base;
+  background-color: $light-background-color;
+  border-radius: $border-radius; 
+  box-shadow: $box-shadow;
+  margin-top: $margin-base; 
+
+  @media (max-width: 768px) {
+    padding: 15px; 
+  }
+
+  .row {
+    margin-bottom: $margin-base; 
+
+    .col-md-6 {
+      padding: 0 15px;
+
+      &:first-child {
+        margin-bottom: $margin-base; 
+      }
+    }
+  }
+
+  p {
+    margin-bottom: $margin-base;
+    line-height: 1.5;
+  }
+
+  .d-flex {
+    margin-top: $margin-base; 
+    flex-direction: column; 
+
+   
+    .btn {
+      margin-bottom: $margin-base; 
+
+      &:last-child {
+        margin-bottom: 0; 
+      }
+    }
+  }
+
+  .btn {
+    padding: 12px 25px; 
+    border-radius: $border-radius; 
+    font-size: $font-size-base; 
+    transition: background-color $transition, color $transition; 
+
+    &.btn-primary {
+      background-color: $primary-color;
+      color: white; 
+      border: none; 
+
+      &:hover {
+        background-color: darken($primary-color, 5%); 
+      }
+    }
+
+ 
+    &.go-back-btn {
+      background-color: transparent; 
+      color: $primary-color; 
+      border: 1px solid $primary-color;
+      transition: background-color $transition, color $transition;
+
+      &:hover {
+        background-color: $primary-color; 
+        color: white; 
+      }
+    }
+  }
+}

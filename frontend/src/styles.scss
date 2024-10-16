@@ -1,0 +1,43 @@
+@import 'src/style_variables.scss';
+
+body {
+  font-family: $font-family; 
+  background-color: $background-color; 
+  color: $text-color; 
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: $primary-color;
+  font-weight: 600; 
+  margin-bottom: $margin-base;
+}
+
+button {
+  padding: 10px 20px; 
+  font-size: $font-size-base;
+  background-color: $button-primary-bg;
+  color: white; 
+  border: none; 
+  border-radius: $border-radius; 
+  cursor: pointer;
+  transition: background-color $transition, box-shadow $transition; 
+
+  &:hover {
+    background-color: $button-primary-hover-bg; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+  }
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: $margin-base; 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; 
+  }
+}

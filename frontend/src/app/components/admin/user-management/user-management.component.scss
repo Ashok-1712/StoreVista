@@ -1,0 +1,116 @@
+@import 'src/style_variables.scss';
+
+.user-management {
+  padding: 20px; 
+  background-color: $background-color; 
+
+  h1 {
+    font-size: 2rem; 
+    font-weight: 700;
+    color: $primary-color; 
+  }
+
+  .btn-toggle {
+    background-color: $button-primary-bg;
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-bottom: 20px; 
+
+    &:hover {
+      background-color: $button-primary-hover-bg; 
+    }
+  }
+
+  .add-user-form {
+    margin-bottom: 20px; 
+
+    form {
+      display: flex; 
+      flex-direction: column; 
+      gap: 10px; 
+
+      input {
+        padding: 10px; 
+        border: 1px solid $input-border-color; 
+        border-radius: 4px;
+
+        &:focus {
+          border-color: $primary-color; 
+          outline: none;
+        }
+      }
+
+      .btn-submit {
+        background-color: $button-primary-bg; 
+        color: white;
+        border: none; 
+        padding: 10px 15px; 
+        border-radius: 4px;
+        cursor: pointer; 
+
+        &:hover {
+          background-color: $button-primary-hover-bg;
+        }
+      }
+
+      small {
+        color: red;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 20px; 
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      border: 1px solid $border-color; 
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: $light-color;
+      font-weight: 700; 
+    }
+
+    .btn-delete {
+      background-color: red; 
+      color: white; 
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px; 
+      cursor: pointer; 
+
+      &:hover {
+        background-color: rgb(154, 39, 39); 
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+    .add-user-form {
+      form {
+        input {
+          font-size: 14px; 
+        }
+      }
+    }
+
+    .user-table {
+      th, td {
+        font-size: 14px; 
+      }
+    }
+  }
+}

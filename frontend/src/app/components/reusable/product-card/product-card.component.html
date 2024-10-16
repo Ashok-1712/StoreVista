@@ -1,0 +1,10 @@
+<div class="card product-card">
+    <img class="card-img-top" [src]="product.p_image" alt="{{ product.p_name }}" />
+    <div class="card-body">
+        <h5 class="card-title">{{ product.p_name }}</h5>
+        <p class="card-text">Category: {{ product.p_category }}</p>
+        <p class="card-text card-price">Price: {{ product.p_price | currency : 'INR' }}</p>
+
+        <ng-content></ng-content>
+    </div>
+</div>

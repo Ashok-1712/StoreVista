@@ -1,0 +1,116 @@
+
+@import 'src/style_variables.scss';
+
+.cart-item {
+  margin-bottom: 20px;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+    background-color: $light-background-color;
+    padding: 15px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: $border-radius;
+    }
+
+    .card-body {
+      margin-top: 10px;
+      width: 100%;
+
+      .card-title {
+        font-size: $font-size-md;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: $font-size-base;
+        margin-bottom: 5px;
+      }
+
+      .card-price {
+        font-size: $font-size-lg;
+        font-weight: 600;
+        color: $highlight-color;
+      }
+    }
+  }
+
+  .cart-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+      width: 60px;
+      margin-right: 10px;
+      border: 1px solid $input-border-color;
+      padding: 5px;
+      border-radius: $border-radius;
+    }
+
+    button {
+      background-color: $button-secondary-bg;
+      padding: 8px 15px;
+      border: none;
+      border-radius: $border-radius;
+      color: white;
+      cursor: pointer;
+      transition: background-color $transition;
+
+      &:hover {
+        background-color: $button-secondary-hover-bg;
+      }
+    }
+  }
+}
+
+.total {
+  margin-top: 30px;
+
+  h3 {
+    font-size: $font-size-lg;
+    color: $primary-color;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 992px) {
+  .cart-item {
+    display: inline-block; 
+    margin-right: 20px;
+    
+    .product-card {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px; 
+      margin: 0 auto; 
+
+      img {
+        width: 150px;
+        height: auto;
+      }
+
+      .card-body {
+        margin-left: 0;
+        flex: 1;
+      }
+
+      .cart-actions {
+        margin-top: 10px;
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+  }
+}

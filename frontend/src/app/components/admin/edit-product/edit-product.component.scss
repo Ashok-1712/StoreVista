@@ -1,0 +1,75 @@
+@import 'src/style_variables.scss';
+
+.edit-product {
+    padding: 40px 20px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+  
+    h2 {
+      margin-bottom: 20px; 
+    }
+  
+    .form-group {
+      margin-bottom: 20px; 
+  
+      label {
+        font-weight: bold;
+        display: block; 
+        margin-bottom: 5px; 
+      }
+  
+      input,
+      textarea {
+        width: 100%; 
+        padding: 10px; 
+        border: 1px solid $border-color; 
+        border-radius: 5px; 
+  
+        &:focus {
+          border-color: $highlight-color; 
+          outline: none; 
+        }
+      }
+  
+      .error-message {
+        color: red; 
+        font-size: 0.9rem; 
+        margin-top: 5px; 
+      }
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: space-between; 
+      margin-top: 20px; 
+  
+      .btn-update,
+      .btn-cancel {
+        padding: 10px 15px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+  
+        &.btn-update {
+          background-color: $highlight-color; 
+          color: white; 
+  
+          &:hover {
+            background-color: $hover-bg-color; 
+          }
+        }
+  
+        &.btn-cancel {
+          background-color: transparent; 
+          border: 1px solid $border-color; 
+          color: $primary-color; 
+  
+          &:hover {
+            background-color: $border-color; 
+            color: white; 
+          }
+        }
+      }
+    }
+  }
+  
